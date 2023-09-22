@@ -66,42 +66,48 @@
 //   };
 
 
-const sumAll = function(first, second) {
+// const sumAll = function(first, second) {
 
-  let sum = 0;
-  let larger;
-  let smaller;
+//   let sum = 0;
+//   let larger;
+//   let smaller;
   
-  if (typeof(first) !== 'number') {
-      return 'ERROR'
-  } else if (typeof(second) !== 'number') {
-      return 'ERROR'
-  } else if (Math.sign(first) === -1) {
-      return 'ERROR'
-  } else if (Math.sign(second) === -1) {
-      return 'ERROR'
-  } else if (first < second) {
-      larger = second;
-      smaller = first;
+//   if (typeof(first) !== 'number') {
+//       return 'ERROR'
+//   } else if (typeof(second) !== 'number') {
+//       return 'ERROR'
+//   } else if (Math.sign(first) === -1) {
+//       return 'ERROR'
+//   } else if (Math.sign(second) === -1) {
+//       return 'ERROR'
+//   } else if (first < second) {
+//       larger = second;
+//       smaller = first;
 
-  } else {
-      larger = first;
-      smaller = second;
+//   } else {
+//       larger = first;
+//       smaller = second;
 
-  }
-
-  
-  for (let index = larger; smaller <= index; index--) {
-
-      sum+= index;
-  }
-
-  return sum
-
-
-
-
-
+//   }
 
   
+//   for (let index = larger; smaller <= index; index--) {
+
+//       sum+= index;
+//   }
+
+//   return sum
+
+// };
+
+
+const leapYears = function(year) {
+
+    if(year % 400 % 4 == 0 && (year % 100 !== 0 || year % 400 === 0)) {
+
+        return true; 
+    }else {
+        return false
+    }
+    
 };
